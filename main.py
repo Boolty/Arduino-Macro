@@ -1,4 +1,3 @@
-from check_access import check_access
 import keyboard
 import time
 import threading
@@ -185,10 +184,4 @@ mouse_listener = mouse.Listener(on_click=on_click)
 mouse_listener.start()
 
 if __name__ == "__main__":
-    access_granted, message = check_access()
-    print(message)
-    if access_granted:
-        main()
-    else:
-        print("Programm closed.")
-        time.sleep(5)
+    main()
