@@ -1,5 +1,4 @@
 import os, time
-from check_access import check_access
 
 def replace_in_file(user_name):
     access_granted, message = check_access()
@@ -133,8 +132,3 @@ def replace_in_file(user_name):
         except Exception as e:
             print(f"Ein Fehler ist aufgetreten: {e}")
             time.sleep(5)
-
-    # Nutzername dynamisch einsetzen
-    import getpass
-    user_name = getpass.getuser()
-    replace_in_file(user_name)
